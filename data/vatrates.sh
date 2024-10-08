@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 mkdir tmp
+echo "country,type,rate,situationOn" > tmp/vatrates.csv
 
 for X in $(seq 1 30); do
     curl 'https://ec.europa.eu/taxation_customs/tedb/rest-api/vatSearch' \
